@@ -1,0 +1,38 @@
+.hero-section > .bg {
+    object-fit: cover;
+    background-repeat: repeat;
+    background-size: 350px;
+    padding: 200px;
+}
+
+.slogans-section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.brush {
+    position: absolute;
+    min-width: 100dvw;
+    min-height: 200px;
+    object-fit: fill;
+}
+
+.brush1 {
+    top: -200px;
+}
+
+.brush2 {
+    rotate: 180deg;
+    bottom: -200px;
+}
+
+.slogans-section > .content {
+    background-color: #fd9d3e;
+    max-width: 1280px;
+}
+
+.slogan{
+
+}

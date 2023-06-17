@@ -1,0 +1,38 @@
+.header {
+    background: #121619;
+}
+
+.right-links{
+    display: flex;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1280px;
+    padding-inline: 15px;
+    margin: 0 auto;
+}
+
+.header-content > nav {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.header-content > nav > button {
+    padding: 25px 18px;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    background: none;
+    border: none;
+    transition-duration: 300ms;
+}
+
+.header-content > nav > button:hover {
+    color: var(--c-primary);
+    cursor: pointer;
+}

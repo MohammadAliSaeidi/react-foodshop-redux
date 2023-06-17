@@ -1,0 +1,58 @@
+.button-icon-no-bg {
+    background: none;
+    border: none;
+    color: white;
+    transition-duration: 300ms;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    text-align: left;
+    align-items: center;
+    cursor: pointer;
+    padding: 24px 18px;
+    text-decoration: none;
+}
+
+.button-icon-no-bg > .icon {
+    position: relative;
+    overflow: clip;
+    min-height: 36px;
+    min-width: 36px;
+}
+
+.button-icon-no-bg > .icon > * {
+    position: absolute;
+    font-size: 18px;
+    line-height: 0;
+}
+
+.button-icon-no-bg > .icon > .icon1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: 300ms;
+    color: var(--c-primary);
+}
+
+.button-icon-no-bg > .icon > .icon2 {
+    transition-duration: 300ms;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button-icon-no-bg:hover > .icon > .icon1 {
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.button-icon-no-bg:hover > .icon > .icon2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}

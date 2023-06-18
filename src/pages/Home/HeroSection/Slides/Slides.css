@@ -1,0 +1,20 @@
+.pizza-slide {
+    width: 100%;
+}
+
+.pizza-slide .title {
+    color: white;
+    font-size: 9.375rem;
+    font-weight: 700;
+    line-height: 11.25rem;
+    text-transform: uppercase;
+}
+
+.pizza-slide .description {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: var(--c-primary);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}

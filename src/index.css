@@ -1,5 +1,7 @@
 :root{
-  --c-primary: #eb974b;
+  --fc-black-text: #121619;
+
+  --c-primary: #fd9d3e;
 }
 
 @font-face {

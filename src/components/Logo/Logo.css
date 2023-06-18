@@ -1,27 +1,3 @@
-.logo{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-family: 'daniel black', 'PT Sans Narrow', sans-serif;
-    color: var(--c-primary);
-    font-size: 48px;
-}
-
 .logo > img{
     height: 54px;
-}
-
-.logo > p{
-    line-height: 1;
-    margin: 20px 0 0;
-}
-
-.logo > svg{
-    width: 54px;
-    fill: white;
-    margin-right: 10px;
-}
-
-.logo > p > span{
-    color:white;
 }

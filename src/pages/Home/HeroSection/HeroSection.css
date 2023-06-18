@@ -1,20 +1,39 @@
-.hero-section > .bg {
+.hero-section {
+    position: relative;
+}
+
+.hero-section > .hero-section--swiper:before {
+    z-index: -1;
+    content: ' ';
+    position: absolute;
+    inset: 0;
+    background-color: #0c161e;
+    opacity: 0.8;
+}
+
+.hero-section > .hero-section--swiper {
+    z-index: 1;
+    position: relative;
+    min-height: 80vh;
+    max-height: 80vh;
     object-fit: cover;
     background-repeat: repeat;
     background-size: 350px;
-    padding: 200px;
+    min-width: 100%;
+    /*overflow: clip;*/
 }
 
 .slogans-section {
+    z-index: 2;
     position: relative;
     display: flex;
     flex-direction: row;
-
+    background-color: #fd9d3e;
 }
 
 .brush {
     position: absolute;
-    min-width: 100dvw;
+    min-width: 100%;
     min-height: 200px;
     object-fit: fill;
 }
@@ -29,10 +48,9 @@
 }
 
 .slogans-section > .content {
-    background-color: #fd9d3e;
+    margin: 0 auto;
     max-width: 1280px;
-}
-
-.slogan{
-
+    display: flex;
+    flex-direction: row;
+    padding-block: 50px;
 }

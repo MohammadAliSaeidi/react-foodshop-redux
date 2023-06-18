@@ -1,0 +1,39 @@
+.slogan {
+    margin-inline: 60px;
+    display: flex;
+    flex-direction: column;;
+    align-items: center;
+    gap: 12px;
+    max-width: 800px;
+}
+
+.slogan > .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--fc-black-text);
+    line-height: 2.25rem;
+}
+
+.slogan > .description {
+    font-size: 0.875rem;
+    color: var(--fc-black-text);
+}
+
+.slogan > div > svg {
+    min-height: 90px;
+    min-width: 90px;
+    max-width: 90px;
+    max-height: 90px;
+    margin: 0;
+    padding: 0;
+}
+
+.slogan > div {
+    width: 100%;
+    fill: var(--fc-black-text);
+    transition-duration: 300ms;
+}
+
+.slogan > div:hover {
+    fill: white;
+}

@@ -1,5 +1,8 @@
 .header {
     background: #121619;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .right-links{
@@ -24,7 +27,7 @@
 
 .header-content > nav > button {
     padding: 25px 18px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     color: white;
     background: none;

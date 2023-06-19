@@ -11,6 +11,7 @@ import {ReactComponent as DeliveryIcon} from '../../../assets/icons/delivery.svg
 import {ReactComponent as DishIcon} from '../../../assets/icons/dish.svg'
 import {ReactComponent as PizzaIcon} from '../../../assets/icons/pizza.svg'
 import Slide1 from "./Slides/Slide1";
+import Slide2 from "./Slides/Slide2";
 
 export default function HeroSection() {
     SwiperCore.use([Autoplay])
@@ -27,18 +28,19 @@ export default function HeroSection() {
                     //         delay: 2000,
                     //         disableOnInteraction: false
                     //     }}
+                    style={{maxHeight: '100%'}}
                 >
-                    <SwiperSlide className='pizza-swiper-slide'>
+                    <SwiperSlide>
                         <Slide1/>
                     </SwiperSlide>
 
-                    <SwiperSlide className='pizza-swiper-slide'>
-                        <Slide1/>
+                    <SwiperSlide>
+                        <Slide2/>
                     </SwiperSlide>
 
-                    <SwiperSlide className='pizza-swiper-slide'>
-                        <Slide1/>
-                    </SwiperSlide>
+                    {/*<SwiperSlide>*/}
+                    {/*    <Slide1/>*/}
+                    {/*</SwiperSlide>*/}
                 </Swiper>
             </div>
             <section className='slogans-section'>

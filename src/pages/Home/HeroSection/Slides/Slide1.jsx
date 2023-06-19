@@ -1,4 +1,5 @@
-import JalapenoPizza from "../../../../assets/pizza/JalapenoPizza.png";
+import JalapenoPizza from "../../../../assets/pizza/pizza-01.png";
+import './Slides.css'
 
 export default function Slide1() {
     return (

@@ -14,13 +14,13 @@
 .hero-section > .hero-section--swiper {
     z-index: 1;
     position: relative;
-    min-height: 80vh;
-    max-height: 80vh;
+    min-height: 85vh;
+    max-height: 85vh;
     object-fit: cover;
     background-repeat: repeat;
     background-size: 350px;
     min-width: 100%;
-    /*overflow: clip;*/
+    overflow: clip;
 }
 
 .slogans-section {
@@ -53,4 +53,8 @@
     display: flex;
     flex-direction: row;
     padding-block: 50px;
+}
+
+.pizza-slide2 > .pictures {
+    max-width: 200px;
 }

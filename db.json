@@ -1,0 +1,160 @@
+{
+  "menu": [
+    {
+      "name": "margherita",
+      "id": 1,
+      "description": "A classic Italian pizza topped with fresh mozzarella cheese, tomato sauce, and basil leaves.",
+      "price": 21.5,
+      "image": "/images/burger.jpg",
+      "category": "Pizza",
+      "availability": true,
+      "offPercentage": 3.5,
+      "rating": 4.5,
+      "reviews": [
+        {
+          "id": 1,
+          "username": "John Doe",
+          "comment": "The pizza was amazing! Highly recommended.",
+          "rating": 5
+        },
+        {
+          "id": 2,
+          "username": "Jane Smith",
+          "comment": "Decent pizza, but a bit too greasy for my taste.",
+          "rating": 3.5
+        }
+      ],
+      "relatedProducts": [2, 3, 4]
+    },
+    {
+      "name": "pepperoni",
+      "id": 2,
+      "description": "A popular American-style pizza with a base of tomato sauce and mozzarella cheese, topped with slices of pepperoni (spicy salami).",
+      "price": 17.99,
+      "image": "/images/burger.jpg",
+      "category": "Pizza",
+      "availability": true,
+      "offPercentage": 0,
+      "rating": 4.7,
+      "reviews": [
+        {
+          "id": 3,
+          "username": "John Doe",
+          "comment": "The pizza was amazing! Highly recommended.",
+          "rating": 5
+        },
+        {
+          "id": 4,
+          "username": "Jane Smith",
+          "comment": "Decent pizza, but a bit too greasy for my taste.",
+          "rating": 3.5
+        }
+      ],
+      "relatedProducts": [2, 3, 4]
+    },
+    {
+      "name": "neapolitan",
+      "id": 3,
+      "description": "Originating from Naples, Italy, this pizza features a thin, soft crust topped with fresh tomato sauce, mozzarella cheese, basil, and olive oil.",
+      "price": 18,
+      "image": "/images/burger.jpg",
+      "category": "Pizza",
+      "availability": true,
+      "offPercentage": 5.2,
+      "rating": 3.8,
+      "reviews": [
+        {
+          "id": 3,
+          "username": "John Doe",
+          "comment": "The pizza was amazing! Highly recommended.",
+          "rating": 5
+        },
+        {
+          "id": 4,
+          "username": "Jane Smith",
+          "comment": "Decent pizza, but a bit too greasy for my taste.",
+          "rating": 3.5
+        }
+      ],
+      "relatedProducts": [2, 3, 4]
+    },
+    {
+      "name": "hawaiian",
+      "id": 4,
+      "description": "A controversial pizza that typically includes tomato sauce, mozzarella cheese, ham, and pineapple. Its sweet and savory combination has garnered both lovers and critics.",
+      "price": 23.99,
+      "image": "/images/burger.jpg",
+      "category": "Pizza",
+      "availability": true,
+      "offPercentage": 1.5,
+      "rating": 4.2,
+      "reviews": [
+        {
+          "id": 3,
+          "username": "John Doe",
+          "comment": "The pizza was amazing! Highly recommended.",
+          "rating": 5
+        },
+        {
+          "id": 4,
+          "username": "Jane Smith",
+          "comment": "Decent pizza, but a bit too greasy for my taste.",
+          "rating": 3.5
+        }
+      ],
+      "relatedProducts": [2, 3, 4]
+    },
+    {
+      "name": "four Cheese (quattro formaggi)",
+      "id": 5,
+      "description": "A cheesy delight featuring a combination of four different cheeses, such as mozzarella, Gorgonzola, Parmesan, and Fontina.",
+      "price": 37.99,
+      "image": "/images/burger.jpg",
+      "category": "Pizza",
+      "availability": true,
+      "offPercentage": 0,
+      "rating": 4.6,
+      "reviews": [
+        {
+          "id": 3,
+          "username": "John Doe",
+          "comment": "The pizza was amazing! Highly recommended.",
+          "rating": 5
+        },
+        {
+          "id": 4,
+          "username": "Jane Smith",
+          "comment": "Decent pizza, but a bit too greasy for my taste.",
+          "rating": 3.5
+        }
+      ],
+      "relatedProducts": [2, 3, 4]
+    },
+    {
+      "name": "BBQ Chicken",
+      "id": 6,
+      "description": "A pizza variant with a barbecue sauce base, topped with grilled chicken, red onions, and sometimes accompanied by bacon and cilantro.",
+      "price": 24,
+      "image": "/images/burger.jpg",
+      "category": "Pizza",
+      "availability": true,
+      "offPercentage": 0,
+      "rating": 3.9,
+      "reviews": [
+        {
+          "id": 3,
+          "username": "John Doe",
+          "comment": "The pizza was amazing! Highly recommended.",
+          "rating": 5
+        },
+        {
+          "id": 4,
+          "username": "Jane Smith",
+          "comment": "Decent pizza, but a bit too greasy for my taste.",
+          "rating": 3.5
+        }
+      ],
+      "relatedProducts": [2, 3, 4]
+    }
+  ]
+}

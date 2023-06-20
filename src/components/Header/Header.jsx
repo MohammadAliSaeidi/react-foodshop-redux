@@ -2,10 +2,30 @@ import './Header.css'
 import Logo from "../Logo";
 import Cart from "../Cart";
 import PhoneNumber from "../PhoneNumber";
+import {useEffect, useState} from "react";
 
 export default function Header() {
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition > 5) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <div className={'header'}>
+        <header className={scrolled ? 'header scrolled' : 'header'}>
             <div className='header-content'>
                 <Logo/>
                 <nav>
@@ -14,10 +34,10 @@ export default function Header() {
                     <button className='nav-button'>BLOG</button>
                 </nav>
                 <div className='right-links'>
-                    <PhoneNumber />
-                    <Cart />
+                    <PhoneNumber/>
+                    <Cart/>
                 </div>
             </div>
-        </div>
+        </header>
     )
 }

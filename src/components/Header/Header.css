@@ -1,8 +1,14 @@
 .header {
-    background: #121619;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 100;
+    left: 0;
+    right: 0;
+    transition-duration: 200ms;
+}
+
+.header.scrolled{
+    background-color: #121619;
 }
 
 .right-links{

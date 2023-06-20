@@ -38,7 +38,11 @@
     justify-content: center;
 }
 
-.pizza-slide2 > .content > *{
+.pizza-slide3 {
+    flex-direction: row-reverse;
+}
+
+.pizza-slide2 > .content > * {
     text-align: left;
 }
 

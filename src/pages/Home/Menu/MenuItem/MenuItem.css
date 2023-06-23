@@ -1,0 +1,53 @@
+.menu-item {
+    /*user-select: none;*/
+    background: none;
+    padding: 48px 24px 24px;
+    transition-duration: 200ms;
+    /*border: 1px solid white;*/
+}
+
+.menu-item:hover {
+    cursor: pointer;
+    padding-top: 24px;
+}
+
+.menu-item > .image {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    transition-duration: 200ms;
+}
+
+.menu-item:hover > .image {
+    margin-bottom: 24px;
+}
+
+.menu-item > .image > img {
+    max-width: 100%;
+}
+
+.menu-item > .name {
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    padding: 25px 0 0 0;
+    margin: 0;
+}
+
+.menu-item:hover > .name {
+    color: var(--c-primary);
+}
+
+.menu-item > .description {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--fc-gray);
+}
+
+.menu-item > .price {
+    color: var(--c-primary);
+    font-size: 18px;
+    letter-spacing: 1px;
+}

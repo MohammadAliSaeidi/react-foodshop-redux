@@ -1,10 +1,10 @@
-import {configureStore} from "@reduxjs/toolkit";
-import cakeReducer from './cake/cakeReducer'
+import {combineReducers, createStore} from "@reduxjs/toolkit";
+import cartReducer from "./Cart/cartReducer";
 
-const store = configureStore({
-    reducer:{
-        cakeReducer: cakeReducer
-    }
+const rootReducer = combineReducers({
+    cart: cartReducer
 })
 
-export default  store
+const store = createStore(rootReducer);
+
+export default store

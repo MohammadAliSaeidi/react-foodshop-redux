@@ -12,10 +12,12 @@
 }
 
 .hero-section > .hero-section--swiper {
+    --hero-section-swiper-height: 85dvh;
+
     z-index: 1;
     position: relative;
-    min-height: 85vh;
-    max-height: 85vh;
+    min-height: var(--hero-section-swiper-height);
+    max-height:  var(--hero-section-swiper-height);
     object-fit: cover;
     background-repeat: repeat;
     background-size: 350px;

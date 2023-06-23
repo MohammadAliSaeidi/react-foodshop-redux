@@ -19,27 +19,27 @@ export default function HeroSection() {
 
     return (
         <section className='hero-section'>
-            <div className='hero-section--swiper' style={{backgroundImage: `url(${bg})`}}>
+            <div className="hero-section--swiper" style={{ backgroundImage: `url(${bg})`, flex: 1 }}>
                 <Swiper
                     slidesPerView={1}
-                    speed={2000}
-                    loop
-                    autoplay=
-                        {{
-                            delay: 2000,
-                            disableOnInteraction: false
-                        }}
-                    style={{maxHeight: '100%'}}
+                    // speed={2000}
+                    // loop
+                    // autoplay=
+                    //     {{
+                    //         delay: 2000,
+                    //         disableOnInteraction: false
+                    //     }}
+                    style={{height: '100%'}}
                 >
-                    <SwiperSlide>
+                    <SwiperSlide style={{height: '100%'}}>
                         <Slide1/>
                     </SwiperSlide>
 
-                    <SwiperSlide>
+                    <SwiperSlide style={{height: '100%'}}>
                         <Slide2/>
                     </SwiperSlide>
 
-                    <SwiperSlide>
+                    <SwiperSlide style={{height: '100%'}}>
                         <Slide3/>
                     </SwiperSlide>
                 </Swiper>

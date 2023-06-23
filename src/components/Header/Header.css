@@ -8,7 +8,7 @@
 }
 
 .header.scrolled{
-    background-color: #121619;
+    background-color: var(--c-secondary);
 }
 
 .right-links{

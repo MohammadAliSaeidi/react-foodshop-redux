@@ -1,7 +1,9 @@
 :root{
   --fc-black-text: #121619;
+  --fc-gray: #999999;
 
   --c-primary: #fd9d3e;
+  --c-secondary: #121619;
 }
 
 @font-face {

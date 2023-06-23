@@ -1,0 +1,12 @@
+.menu {
+    background: var(--c-secondary);
+    padding-top: 300px;
+}
+
+.menu > .content {
+    margin: 0 auto;
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}

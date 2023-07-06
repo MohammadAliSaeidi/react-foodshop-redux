@@ -2,6 +2,7 @@ import './HomePage.css'
 import Header from "../../components/Header";
 import HeroSection from "./HeroSection";
 import Menu from "./Menu";
+import Footer from "../../components/Footer/Footer";
 
 export default function HomePage() {
     return (
@@ -9,6 +10,7 @@ export default function HomePage() {
             <Header/>
             <HeroSection/>
             <Menu />
+            <Footer />
         </div>
     )
 }

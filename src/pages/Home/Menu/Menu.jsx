@@ -1,20 +1,15 @@
 import './Menu.css'
-import {useEffect, useState} from "react";
-import {GetMenuData} from "../../../services/WebServices";
 import MenuItem from "./MenuItem";
+import MenuContext from "../../../Context/MenuContext";
+import {useContext} from "react";
 
 export default function Menu() {
-    const [menuData, setMenuData] = useState([])
+    const menuData = useContext(MenuContext);
 
-    useEffect(() => {
-        GetMenuData().then(menuData => {
-            setMenuData(() => menuData)
-        })
-    }, [])
-
-    const menuItems = menuData ? menuData.map(menuItemData =>
-            <MenuItem data={menuItemData}/>) :
+    const menuItems = menuData ? menuData.map((menuItemData, index) =>
+            <MenuItem key={index} data={menuItemData}/>) :
         null;
+
 
     return (
         <section className='menu'>

@@ -24,7 +24,11 @@
           "rating": 3.5
         }
       ],
-      "relatedProducts": [2, 3, 4]
+      "relatedProducts": [
+        2,
+        3,
+        4
+      ]
     },
     {
       "name": "pepperoni",
@@ -50,7 +54,11 @@
           "rating": 3.5
         }
       ],
-      "relatedProducts": [2, 3, 4]
+      "relatedProducts": [
+        2,
+        3,
+        4
+      ]
     },
     {
       "name": "neapolitan",
@@ -76,7 +84,11 @@
           "rating": 3.5
         }
       ],
-      "relatedProducts": [2, 3, 4]
+      "relatedProducts": [
+        2,
+        3,
+        4
+      ]
     },
     {
       "name": "hawaiian",
@@ -102,7 +114,11 @@
           "rating": 3.5
         }
       ],
-      "relatedProducts": [2, 3, 4]
+      "relatedProducts": [
+        2,
+        3,
+        4
+      ]
     },
     {
       "name": "four Cheese (quattro formaggi)",
@@ -128,7 +144,11 @@
           "rating": 3.5
         }
       ],
-      "relatedProducts": [2, 3, 4]
+      "relatedProducts": [
+        2,
+        3,
+        4
+      ]
     },
     {
       "name": "BBQ Chicken",
@@ -154,7 +174,25 @@
           "rating": 3.5
         }
       ],
-      "relatedProducts": [2, 3, 4]
+      "relatedProducts": [
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "cart-items": [
+    {
+      "id": 1,
+      "quantity" : 1
+    },
+    {
+      "id": 3,
+      "quantity" : 3
+    },
+    {
+      "id": 5,
+      "quantity" : 2
     }
   ]
 }

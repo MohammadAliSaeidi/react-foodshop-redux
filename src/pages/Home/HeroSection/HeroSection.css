@@ -12,7 +12,7 @@
 }
 
 .hero-section > .hero-section--swiper {
-    --hero-section-swiper-height: 85dvh;
+    --hero-section-swiper-height: 95dvh;
 
     z-index: 1;
     position: relative;

@@ -8,7 +8,7 @@ import {useSelector} from "react-redux";
 
 export default function Cart({itemsCount, price}) {
 	const [isOpen, setIsOpen] = useState(false)
-	const cartItems = useSelector(state => state.cart.cartItems)
+	const cartItems = useSelector(state => state.cartItems)
 
 	const handleOnMouseEnter = () => {
 		setTimeout(() => {

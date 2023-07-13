@@ -22,7 +22,7 @@ function CartItem({data}) {
 			<div className='quantity'>
 				<p>Qty:</p>
 				<div className='input'>
-					<button onClick={handleQuantityDecrement}>-</button>
+					<button className='quantity-button' onClick={handleQuantityDecrement}>-</button>
 					<input
 						step={1}
 						type='number'
@@ -31,7 +31,7 @@ function CartItem({data}) {
 						value={data.quantity}
 						readOnly
 					/>
-					<button onClick={handleQuantityIncrement}>+</button>
+					<button className='quantity-button' onClick={handleQuantityIncrement}>+</button>
 				</div>
 			</div>
 		</div>

@@ -1,10 +1,15 @@
 import './Menu.css'
 import MenuItem from "./MenuItem";
-import MenuContext from "../../../Context/MenuContext";
-import {useContext} from "react";
+import {useContext, useEffect, useState} from "react";
+import {GetMenuData} from "../../../services/WebServices";
 
 export default function Menu() {
-    const menuData = useContext(MenuContext);
+
+    const [menuData, setMenuData] = useState([])
+
+    useEffect(() => {
+        GetMenuData().then(data => setMenuData(data))
+    }, [])
 
     const menuItems = menuData ? menuData.map((menuItemData, index) =>
             <MenuItem key={index} data={menuItemData}/>) :

@@ -76,7 +76,7 @@ export default function Cart({itemsCount, price}) {
 					<>{itemsCount} items - ${price ? price : '0.00'}</>
 				}/>
 			{
-				isOpen && <CartPopup cartData={cartData}/>
+				true && <CartPopup cartData={cartData}/>
 			}
 		</div>
 	)

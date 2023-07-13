@@ -14,7 +14,12 @@ export async function GetMenuData() {
 		});
 }
 
-export async function GetCartItemIds() {
+export async function GetCartItems() {
 	return await axiosInstance.get('/cart-items')
+		.then(result => result.data)
+}
+
+export async function GetMenuItemById(id) {
+	return await axiosInstance.get(`/menu/${id}`)
 		.then(result => result.data)
 }

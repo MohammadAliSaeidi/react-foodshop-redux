@@ -1,20 +1,20 @@
 import './CartItem.css';
-import {connect} from 'react-redux';
-import {decreaseQuantity, increaseQuantity} from '../../../redux/Cart/cartActions';
+import {useDispatch} from "react-redux";
+import {decreaseQuantity, increaseQuantity} from "../../../redux/Cart/cartSlice";
 
-function CartItem({data, increaseQuantity, decreaseQuantity}) {
+function CartItem({ data}) {
 	const imagePath = process.env.PUBLIC_URL + `/images/${data.image}`;
+	const dispatch = useDispatch();
 
 	function handleQuantityIncrement() {
-		increaseQuantity(data.id);
+		dispatch(increaseQuantity(data.id))
 	}
 
 	function handleQuantityDecrement() {
-		decreaseQuantity(data.id);
+		dispatch(decreaseQuantity(data.id))
 	}
 
-	return (
-		<div className='cart-item' key={data.id}>
+	return <div key={data.id} className='cart-item'>
 			<img src={imagePath} alt=''/>
 			<div className='info'>
 				<span className='name'>{data.name}</span>
@@ -36,12 +36,6 @@ function CartItem({data, increaseQuantity, decreaseQuantity}) {
 				</div>
 			</div>
 		</div>
-	);
 }
 
-const mapDispatchToProps = {
-	increaseQuantity,
-	decreaseQuantity,
-};
-
-export default connect(null, mapDispatchToProps)(CartItem);
+export default CartItem

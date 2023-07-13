@@ -33,26 +33,30 @@ export default function Cart({itemsCount, price}) {
 	useEffect(() => {
 		if (cartItems.length > 0) {
 			const fetchCartData = async () => {
-				const cartDataPromises = cartItems.map(async (item) => {
-					const menuItemData = await GetMenuItemById(item.id);
+				let subtotal = 0;
+				const cartDataPromises = cartItems.map(async (cartItem) => {
+					const menuItemData = await GetMenuItemById(cartItem.id)
+					subtotal += menuItemData.price * cartItem.quantity
 					return {
 						id: menuItemData.id,
 						name: menuItemData.name,
-						price: menuItemData.price,
+						price: menuItemData.price * cartItem.quantity,
 						image: menuItemData.image,
 						availability: menuItemData.availability,
 						offPercentage: menuItemData.offPercentage,
-						quantity: menuItemData.quantity,
-					};
-				});
+						quantity: cartItem.quantity,
+					}
+				})
 
 				const resolvedCartData = await Promise.all(cartDataPromises);
-				setCartData(resolvedCartData);
-			};
+				setCartData({
+					cartItems: resolvedCartData,
+					subtotal: subtotal.toFixed(2)})
+			}
 
-			fetchCartData();
+			fetchCartData()
 		}
-	}, [cartItems]);
+	}, [cartItems])
 
 	const handleOnMouseEnter = () => {
 		setTimeout(() => {
@@ -72,7 +76,7 @@ export default function Cart({itemsCount, price}) {
 					<>{itemsCount} items - ${price ? price : '0.00'}</>
 				}/>
 			{
-				isOpen && <CartPopup cartItemsData={cartData}/>
+				isOpen && <CartPopup cartData={cartData}/>
 			}
 		</div>
 	)

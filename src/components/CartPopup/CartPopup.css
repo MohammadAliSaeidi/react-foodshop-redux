@@ -7,3 +7,8 @@
     padding: 18px 24px;
     border-top: 3px solid var(--c-primary);
 }
+
+.cart-content > .subtotal{
+    display: flex;
+    justify-content: space-between;
+}

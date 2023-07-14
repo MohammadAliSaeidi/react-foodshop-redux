@@ -22,10 +22,21 @@ export const cartSlice = createSlice({
 		},
 
 		removeFromCart(state, action) {
+			const updatedCartItems = state.cartItems.filter(item => item.id !== action.payload);
+			console.log(updatedCartItems)
+
+			if (updatedCartItems.length === 0) {
+				return {
+					...state,
+					cartItems: [],
+					total: 0
+				};
+			}
+
 			return {
 				...state,
-				cartItems: state.cartItems.filter(item => item.id === action.payload),
-			}
+				cartItems: updatedCartItems
+			};
 		},
 
 		increaseQuantity(state, action) {
@@ -53,6 +64,7 @@ export const cartSlice = createSlice({
 							quantity: item.quantity - 1,
 						};
 					}
+
 					return item;
 				}),
 			}

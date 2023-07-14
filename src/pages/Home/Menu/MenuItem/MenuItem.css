@@ -1,9 +1,7 @@
 .menu-item {
-    /*user-select: none;*/
     background: none;
     padding: 48px 24px 24px;
     transition-duration: 200ms;
-    /*border: 1px solid white;*/
 }
 
 .menu-item:hover {
@@ -46,8 +44,48 @@
     color: var(--fc-gray);
 }
 
-.menu-item > .price {
+
+.add-to-cart-and-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.add-to-cart-and-price > .price {
     color: var(--c-primary);
     font-size: 18px;
     letter-spacing: 1px;
+}
+
+.add-to-cart-and-price > .add-to-cart {
+    overflow: clip;
+    min-height: fit-content;
+    max-width: 0px;
+    transition-duration: 200ms;
+}
+
+.add-to-cart-and-price > .add-to-cart.show-add-button {
+    max-width: 100px;
+}
+
+.add-to-cart-and-price > .add-to-cart > button {
+    cursor: pointer;
+    text-wrap: none;
+    white-space: nowrap;
+    background: none;
+    border: 2px solid var(--c-primary);
+    color: var(--c-primary);
+    border-radius: 50px;
+    min-height: 36px;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition-duration: 200ms;
+}
+
+.add-to-cart-and-price > .add-to-cart > button:hover {
+    background-color: var(--c-primary);
+    color:black;
 }

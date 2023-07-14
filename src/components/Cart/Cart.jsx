@@ -10,7 +10,7 @@ import {addToCart} from "../../redux/Cart/cartSlice";
 export default function Cart({itemsCount, price}) {
 	const [isOpen, setIsOpen] = useState(false)
 	const [cartUpdated, setCartUpdate] = useState(false)
-	const [cartData, setCartData] = useState()
+	const [cartData, setCartData] = useState({cartItems: [], subtotal: 0})
 	const dispatch = useDispatch();
 	const cartItems = useSelector(state => state.cart.cartItems)
 
@@ -56,6 +56,9 @@ export default function Cart({itemsCount, price}) {
 
 			fetchCartData()
 		}
+		else{
+			setCartData({cartItems: [], subtotal: 0})
+		}
 	}, [cartItems])
 
 	const handleOnMouseEnter = () => {
@@ -76,7 +79,7 @@ export default function Cart({itemsCount, price}) {
 					<>{itemsCount} items - ${price ? price : '0.00'}</>
 				}/>
 			{
-				true && <CartPopup cartData={cartData}/>
+				isOpen && <CartPopup cartData={cartData}/>
 			}
 		</div>
 	)

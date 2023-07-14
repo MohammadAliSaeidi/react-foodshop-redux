@@ -13,9 +13,14 @@
 
 body {
   margin: 0;
-  font-family: 'PT Sans Narrow', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+input,
+button{
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 button{

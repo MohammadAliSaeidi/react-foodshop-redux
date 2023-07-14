@@ -7,24 +7,27 @@ export default function CartPopup({cartData}) {
 	const [cartItems, setCartItems] = useState([])
 
 	useEffect(() => {
-		const items = cartData.cartItems.map((cartData) => {
-			return <CartItem data={cartData}/>
-		})
-
-		setCartItems(items)
-	}, cartData)
-
+		if (cartData) {
+			const items = cartData.cartItems.map((cartData) => {
+				return <CartItem key={cartData.id} data={cartData}/>
+			})
+			setCartItems(items)
+		}
+	}, [cartData])
 
 
 	return (
 		<div className='cart-popup'>
 			{
-				cartItems ?
+				cartItems.length > 0 ?
 					<div className='cart-content'>
 						{cartItems}
-						<div className='subtotal'><span>Cart Subtotal: </span><span>${cartData.subtotal}</span></div>
+						<div className='subtotal-container'>
+							<span>Cart Subtotal: </span>
+							<span className='subtotal'>${cartData.subtotal}</span>
+						</div>
 					</div> :
-					<div>No items here</div>
+					<div className='empty-cart'>Your cart is empty</div>
 			}
 		</div>
 	)

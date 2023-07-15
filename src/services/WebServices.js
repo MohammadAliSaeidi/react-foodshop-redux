@@ -1,12 +1,11 @@
 import axios from "axios";
 
 
-const axiosInstance = axios.create({
+const axiosJsonServer = axios.create({
 	baseURL: 'http://localhost:3001'
 })
-
 export async function GetMenuData() {
-	return axiosInstance.get('/menu')
+	return axiosJsonServer.get('/menu')
 		.then(result => result.data)
 		.catch(error => {
 			console.log(error.message)
@@ -15,11 +14,16 @@ export async function GetMenuData() {
 }
 
 export async function GetCartItems() {
-	return await axiosInstance.get('/cart-items')
+	return await axiosJsonServer.get('/cart-items')
 		.then(result => result.data)
 }
 
 export async function GetMenuItemById(id) {
-	return await axiosInstance.get(`/menu/${id}`)
+	return await axiosJsonServer.get(`/menu/${id}`)
 		.then(result => result.data)
+}
+
+
+export async function IncreaseItemQuantity(id) {
+	return await axiosJsonServer.put(`/cart-items/${id}/increment`).then(result => console.log(result));
 }

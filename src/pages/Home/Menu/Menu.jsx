@@ -1,26 +1,26 @@
 import './Menu.css'
 import MenuItem from "./MenuItem";
-import {useContext, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import {GetMenuData} from "../../../services/WebServices";
 
 export default function Menu() {
 
-    const [menuData, setMenuData] = useState([])
+	const [menuData, setMenuData] = useState([])
 
-    useEffect(() => {
-        GetMenuData().then(data => setMenuData(data))
-    }, [])
+	useEffect(() => {
+		GetMenuData().then(data => setMenuData(data))
+	}, [])
 
-    const menuItems = menuData ? menuData.map((menuItemData, index) =>
-            <MenuItem key={index} data={menuItemData}/>) :
-        null;
+	const menuItems = menuData ? menuData.map((menuItemData, index) =>
+			<MenuItem key={index} data={menuItemData}/>) :
+		null;
 
 
-    return (
-        <section className='menu'>
-            <div className='content'>
-                {menuItems}
-            </div>
-        </section>
-    )
+	return (
+		<section className='menu'>
+			<div className='content'>
+				{menuItems}
+			</div>
+		</section>
+	)
 }

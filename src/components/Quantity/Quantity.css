@@ -18,6 +18,7 @@
 }
 
 .quantity-inputs > input {
+    background: none;
     border: none;
     min-height: 24px;
     width: var(--input-width);

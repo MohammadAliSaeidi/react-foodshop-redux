@@ -181,18 +181,5 @@
       ]
     }
   ],
-  "cart-orders": [
-    {
-      "id": 2,
-      "quantity": 1
-    },
-    {
-      "id": 4,
-      "quantity": 13
-    },
-    {
-      "id": 6,
-      "quantity": 1
-    }
-  ]
+  "cart-orders": []
 }

@@ -2,6 +2,9 @@
     background: none;
     padding: 48px 24px 24px;
     transition-duration: 200ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .menu-item:hover {
@@ -71,7 +74,7 @@
     max-width: 100px;
 }
 
-.add-to-cart-and-price > .add-to-cart > button {
+.add-to-cart-button {
     cursor: pointer;
     text-wrap: none;
     white-space: nowrap;
@@ -85,7 +88,7 @@
     transition-duration: 200ms;
 }
 
-.add-to-cart-and-price > .add-to-cart > button:hover {
+.add-to-cart-button:hover {
     background-color: var(--c-primary);
-    color:black;
+    color: black;
 }

@@ -6,7 +6,7 @@ import {decreaseQuantity, increaseQuantity, removeFromCart} from "../../redux/Ca
 import {ReactComponent as TrashIcon} from '../../assets/icons/trash.svg'
 import './Quantity.css'
 
-function Quantity({productId, productQuantity}) {
+function Quantity({productId, productQuantity, inputTextColor = 'black'}) {
 	const dispatch = useDispatch();
 	const [quantityLoading, setQuantityLoading] = useState(false)
 
@@ -47,7 +47,6 @@ function Quantity({productId, productQuantity}) {
 	}
 
 	return (
-
 		<div className='quantity-inputs'>
 			{
 				quantityLoading ?
@@ -68,6 +67,7 @@ function Quantity({productId, productQuantity}) {
 							}
 						</button>
 						<input
+							style={{color: inputTextColor}}
 							step={1}
 							type='number'
 							minLength={1}

@@ -1,5 +1,5 @@
 import './Menu.css'
-import MenuItem from "./MenuItem";
+import MenuProduct from "./MenuProduct";
 import {useEffect, useState} from "react";
 import {GetMenuData} from "../../../services/WebServices";
 
@@ -12,7 +12,7 @@ export default function Menu() {
 	}, [])
 
 	const menuItems = menuData ? menuData.map((menuItemData, index) =>
-			<MenuItem key={index} data={menuItemData}/>) :
+			<MenuProduct key={index} data={menuItemData}/>) :
 		null;
 
 

@@ -30,7 +30,6 @@ export const cartSlice = createSlice({
 
 		removeFromCart(state, action) {
 			const updatedCartOrders = state.cartOrders.filter(order => order.id !== action.payload);
-			console.log(updatedCartOrders)
 
 			if (updatedCartOrders.length === 0) {
 				return {

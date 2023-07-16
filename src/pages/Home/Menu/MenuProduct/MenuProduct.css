@@ -1,7 +1,7 @@
 .menu-item {
     background: none;
     padding: 48px 24px 24px;
-    transition-duration: 200ms;
+    transition-duration: var(--hover-duration);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,7 +16,7 @@
     margin: 0 auto;
     width: 200px;
     height: 200px;
-    transition-duration: 200ms;
+    transition-duration: var(--hover-duration);
 }
 
 .menu-item:hover > .image {
@@ -67,7 +67,7 @@
     overflow: clip;
     min-height: fit-content;
     max-width: 0px;
-    transition-duration: 200ms;
+    transition-duration: var(--hover-duration);
 }
 
 .add-to-cart-and-price > .add-to-cart.show-add-button {
@@ -85,7 +85,7 @@
     min-height: 36px;
     font-size: 16px;
     padding: 5px 10px;
-    transition-duration: 200ms;
+    transition-duration: var(--hover-duration);
 }
 
 .add-to-cart-button:hover {

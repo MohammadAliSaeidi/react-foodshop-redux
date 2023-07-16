@@ -63,13 +63,16 @@ export default function Cart() {
 		}
 	}, [cartOrders])
 
+	let onMouseEnterTimout;
+
 	const handleOnMouseEnter = () => {
-		setTimeout(() => {
+		onMouseEnterTimout = setTimeout(() => {
 			setIsOpen(true)
 		}, 200)
 	};
 
 	const handleOnMouseLeave = () => {
+		clearTimeout(onMouseEnterTimout)
 		setIsOpen(false)
 	}
 

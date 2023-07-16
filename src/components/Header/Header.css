@@ -4,7 +4,7 @@
     z-index: 100;
     left: 0;
     right: 0;
-    transition-duration: 200ms;
+    transition-duration: var(--hover-duration);
 }
 
 .header.scrolled{

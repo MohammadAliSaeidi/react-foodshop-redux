@@ -1,34 +1,42 @@
-:root{
-  --fc-black-text: #121619;
-  --fc-gray: #999999;
+:root {
+    --fc-black-text: #121619;
+    --fc-gray: #999999;
 
-  --c-primary: #fd9d3e;
-  --c-secondary: #121619;
-}
-
-@font-face {
-  font-family: 'daniel black';
-  src: url('./fonts/danielbk.ttf') format("truetype");
+    --c-primary: #fd9d3e;
+    --c-secondary: #121619;
+    --hover-duration: 200ms;
 }
 
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  user-select: none;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
 }
 
 body,
 input,
-button{
-  font-family: 'PT Sans Narrow', sans-serif;
+button {
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
-button{
-  font-family: 'PT Sans Narrow', sans-serif;
+button {
+    font-family: 'PT Sans Narrow', sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.link {
+    color: white;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    transition-duration: var(--hover-duration);
+}
+
+.link:hover {
+    color: var(--c-primary);
 }

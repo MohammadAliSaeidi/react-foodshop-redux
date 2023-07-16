@@ -4,26 +4,25 @@ import IconButton from "../IconButton";
 import {useEffect, useState} from "react";
 import CartPopup from "../CartPopup";
 import {useDispatch, useSelector} from "react-redux";
-import {GetCartItems, GetMenuItemById} from "../../services/WebServices";
+import {GetCartOrders, GetMenuProductById} from "../../services/WebServices";
 import {addToCart} from "../../redux/Cart/cartSlice";
 
-export default function Cart({itemsCount, price}) {
+export default function Cart() {
 	const [isOpen, setIsOpen] = useState(false)
 	const [cartUpdated, setCartUpdate] = useState(false)
-	const [cartData, setCartData] = useState({cartItems: [], subtotal: 0})
+	const [cartData, setCartData] = useState({cartOrders: [], subtotal: 0, ordersCount: 0})
 	const dispatch = useDispatch();
-	const cartItems = useSelector(state => state.cart.cartItems)
-
+	const cartOrders = useSelector(state => state.cart.cartOrders)
 
 	useEffect(() => {
 		(async () => {
 			if (!cartUpdated) {
 				try {
-					const cartItemsInfo = await GetCartItems();
-					dispatch(addToCart(cartItemsInfo));
+					const cartOrdersInfo = await GetCartOrders();
+					dispatch(addToCart(cartOrdersInfo));
 					setCartUpdate(true);
 				} catch (error) {
-					console.error('Error fetching cart items:', error);
+					console.error('Error fetching cart data:', error);
 				}
 			}
 		})();
@@ -31,55 +30,58 @@ export default function Cart({itemsCount, price}) {
 
 
 	useEffect(() => {
-		if (cartItems.length > 0) {
+		if (cartOrders.length > 0) {
 			const fetchCartData = async () => {
 				let subtotal = 0;
-				const cartDataPromises = cartItems.map(async (cartItem) => {
-					const menuItemData = await GetMenuItemById(cartItem.id)
-					subtotal += menuItemData.price * cartItem.quantity
+				let ordersCount = 0;
+				const cartDataPromises = cartOrders.map(async (cartOrder) => {
+					const productData = await GetMenuProductById(cartOrder.id)
+					subtotal += productData.price * cartOrder.quantity
+					ordersCount += cartOrder.quantity
 					return {
-						id: menuItemData.id,
-						name: menuItemData.name,
-						price: menuItemData.price * cartItem.quantity,
-						image: menuItemData.image,
-						availability: menuItemData.availability,
-						offPercentage: menuItemData.offPercentage,
-						quantity: cartItem.quantity,
+						id: productData.id,
+						name: productData.name,
+						price: productData.price * cartOrder.quantity,
+						image: productData.image,
+						availability: productData.availability,
+						offPercentage: productData.offPercentage,
+						quantity: cartOrder.quantity,
 					}
 				})
 
 				const resolvedCartData = await Promise.all(cartDataPromises);
 				setCartData({
-					cartItems: resolvedCartData,
-					subtotal: subtotal.toFixed(2)})
+					cartOrders: resolvedCartData,
+					subtotal: subtotal.toFixed(2),
+					ordersCount: ordersCount
+				})
 			}
 
 			fetchCartData()
+		} else {
+			setCartData({cartOrders: [], subtotal: 0, ordersCount: 0})
 		}
-		else{
-			setCartData({cartItems: [], subtotal: 0})
-		}
-	}, [cartItems])
+	}, [cartOrders])
 
 	const handleOnMouseEnter = () => {
 		setTimeout(() => {
-			setIsOpen(true);
-		}, 200);
+			setIsOpen(true)
+		}, 200)
 	};
 
 	const handleOnMouseLeave = () => {
-		setIsOpen(false);
-	};
+		setIsOpen(false)
+	}
 
 	return (
 		<div className='cart' onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave}>
 			<IconButton
 				icon={<BsBag/>}
 				content={
-					<>{itemsCount} items - ${price ? price : '0.00'}</>
+					<>{cartData.ordersCount} items - ${(cartData && cartData.subtotal) ? cartData.subtotal : '0.00'}</>
 				}/>
 			{
-				isOpen && <CartPopup cartData={cartData}/>
+				isOpen && <CartPopup cartOrdersData={cartData}/>
 			}
 		</div>
 	)

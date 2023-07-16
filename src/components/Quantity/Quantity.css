@@ -1,0 +1,70 @@
+.quantity-inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--c-primary);
+    padding-block: 5px;
+    border-radius: 5px;
+    height: 24px;
+
+    --button-size: 24px;
+    --input-width: 24px;
+}
+
+.quantity-inputs > *{
+    margin: 0;
+    padding: 0;
+}
+
+.quantity-inputs > input {
+    border: none;
+    min-height: 24px;
+    width: var(--input-width);
+    text-align: center;
+    color: var(--fc-black-text);
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    user-select: none;
+}
+
+.quantity-inputs > input:focus{
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.quantity-inputs > input::selection{
+    user-select: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.loading{
+    width: calc((var(--button-size) * 2) + var(--input-width));
+}
+
+.quantity-button {
+    border:none;
+    color: var(--c-primary);
+    background: none;
+    font-size: 18px;
+    width: var(--button-size);
+    height: var(--button-size);
+}
+
+.quantity-button > .remove-icon > svg{
+    fill: var(--c-primary);
+    width: 12px;
+}
+
+.quantity-button:hover {
+    cursor: pointer;
+}

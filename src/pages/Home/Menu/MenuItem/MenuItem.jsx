@@ -1,10 +1,37 @@
 import './MenuItem.css'
-import {useState} from "react";
+import React, {useEffect, useState} from "react";
+import {AddOrderToCart} from "../../../../services/WebServices";
+import {addToCart} from "../../../../redux/Cart/cartSlice";
+import {useDispatch, useSelector} from "react-redux";
+import Loading from "../../../../components/Loading";
 
 export default function MenuItem({data}) {
 	const [hovered, setHovered] = useState(false)
+	const [addOrderLoading, setAddOrderLoading] = useState(false)
+	const cartOrders = useSelector((state) => state.cart.cartOrders);
+	const [cartOrder, setCartOrder] = useState()
+	const dispatch = useDispatch();
 
 	const imagePath = process.env.PUBLIC_URL + `/images/${data.image}`;
+
+
+	useEffect(() => {
+		const foundOrder = cartOrders.find((order) => order.id === data.id);
+		setCartOrder(foundOrder);
+	}, [data.id, cartOrders]);
+
+	function handleAddToCart() {
+		setAddOrderLoading(true)
+		AddOrderToCart(data.id).then(result => {
+			if (result.status === 200)
+				dispatch(addToCart({id: data.id, quantity: 1}))
+			setAddOrderLoading(false)
+		}).catch(error => {
+			console.log(error)
+			setAddOrderLoading(false)
+		})
+	}
+
 
 	return (
 		<div
@@ -18,7 +45,9 @@ export default function MenuItem({data}) {
 			<p className='description'>{data.description}</p>
 			<div className='add-to-cart-and-price'>
 				<div className={'add-to-cart ' + (hovered ? 'show-add-button' : '')}>
-					<button>Add to cart</button>
+					<button onClick={handleAddToCart}>{
+						addOrderLoading ? <Loading size={16}/> : 'Add to cart'
+					}</button>
 				</div>
 				<p className='price'>${data.price}</p>
 			</div>

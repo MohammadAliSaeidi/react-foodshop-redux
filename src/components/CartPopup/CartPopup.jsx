@@ -1,30 +1,30 @@
 import './CartPopup.css'
-import CartItem from "./CartItem";
+import CartOrder from "./CartOrder";
 import {useEffect, useState} from "react";
 
-export default function CartPopup({cartData}) {
+export default function CartPopup({cartOrdersData}) {
 
-	const [cartItems, setCartItems] = useState([])
+	const [cartOrders, setCartOrders] = useState([])
 
 	useEffect(() => {
-		if (cartData) {
-			const items = cartData.cartItems.map((cartData) => {
-				return <CartItem key={cartData.id} data={cartData}/>
+		if (cartOrdersData) {
+			const orders = cartOrdersData.cartOrders.map((orderData) => {
+				return <CartOrder key={orderData.id} productData={orderData}/>
 			})
-			setCartItems(items)
+			setCartOrders(orders)
 		}
-	}, [cartData])
+	}, [cartOrdersData])
 
 
 	return (
 		<div className='cart-popup'>
 			{
-				cartItems.length > 0 ?
+				cartOrders.length > 0 ?
 					<div className='cart-content'>
-						{cartItems}
+						{cartOrders}
 						<div className='subtotal-container'>
 							<span>Cart Subtotal: </span>
-							<span className='subtotal'>${cartData.subtotal}</span>
+							<span className='subtotal'>${cartOrdersData.subtotal}</span>
 						</div>
 					</div> :
 					<div className='empty-cart'>Your cart is empty</div>

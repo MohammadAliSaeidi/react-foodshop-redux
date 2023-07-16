@@ -3,53 +3,60 @@ import {createSlice} from "@reduxjs/toolkit";
 export const cartSlice = createSlice({
 	name: 'cart',
 	initialState: {
-		cartItems: [],
+		cartOrders: [],
 		total: 0,
 	},
 	reducers: {
 		addToCart(state, action) {
-			const newCartItems = action.payload;
+			let newOrders = action.payload;
 
-			const finalCartItems = [
-				...state.cartItems,
-				...newCartItems.filter((newItem) => !state.cartItems.some((cartItem) => cartItem.id === newItem.id)),
+			// Convert single order to an array if it's not already
+			if (!Array.isArray(newOrders)) {
+				newOrders = [newOrders];
+			}
+
+			const finalCartOrders = [
+				...state.cartOrders,
+				...newOrders.filter(
+					(newOrder) => !state.cartOrders.some((order) => order.id === newOrder.id)
+				),
 			];
 
 			return {
 				...state,
-				cartItems: finalCartItems,
+				cartOrders: finalCartOrders,
 			};
 		},
 
 		removeFromCart(state, action) {
-			const updatedCartItems = state.cartItems.filter(item => item.id !== action.payload);
-			console.log(updatedCartItems)
+			const updatedCartOrders = state.cartOrders.filter(order => order.id !== action.payload);
+			console.log(updatedCartOrders)
 
-			if (updatedCartItems.length === 0) {
+			if (updatedCartOrders.length === 0) {
 				return {
 					...state,
-					cartItems: [],
+					cartOrders: [],
 					total: 0
 				};
 			}
 
 			return {
 				...state,
-				cartItems: updatedCartItems
+				cartOrders: updatedCartOrders
 			};
 		},
 
 		increaseQuantity(state, action) {
 			return {
 				...state,
-				cartItems: state.cartItems.map(item => {
-					if (item.id === action.payload) {
+				cartOrders: state.cartOrders.map(order => {
+					if (order.id === action.payload) {
 						return {
-							...item,
-							quantity: item.quantity + 1,
+							...order,
+							quantity: order.quantity + 1,
 						};
 					}
-					return item;
+					return order;
 				})
 			}
 		},
@@ -57,15 +64,15 @@ export const cartSlice = createSlice({
 		decreaseQuantity(state, action) {
 			return {
 				...state,
-				cartItems: state.cartItems.map(item => {
-					if (item.id === action.payload && item.quantity > 1) {
+				cartOrders: state.cartOrders.map(order => {
+					if (order.id === action.payload && order.quantity > 1) {
 						return {
-							...item,
-							quantity: item.quantity - 1,
+							...order,
+							quantity: order.quantity - 1,
 						};
 					}
 
-					return item;
+					return order;
 				}),
 			}
 		},
@@ -73,7 +80,7 @@ export const cartSlice = createSlice({
 		clearCart(state, action) {
 			return {
 				...state,
-				cartItems: []
+				cartOrders: []
 			}
 		}
 	}

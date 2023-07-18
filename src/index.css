@@ -17,16 +17,11 @@ body {
 body,
 input,
 button {
-    font-family: 'PT Sans Narrow', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 button {
-    font-family: 'PT Sans Narrow', sans-serif;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: 'Poppins', sans-serif;
 }
 
 .link {

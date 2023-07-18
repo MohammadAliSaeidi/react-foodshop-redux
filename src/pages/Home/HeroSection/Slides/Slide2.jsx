@@ -6,8 +6,9 @@ export default function Slide2() {
         <>
             <div className='pizza-slide pizza-slide2'>
                 <div className='content'>
-                    <span className='title'>QUALITY <br/>F<span style={{color: 'var(--c-primary'}}>OO</span>DS</span>
-                    <span className='description'>healthy food for healthy body</span>
+                    <span className='subheading'>Welcome</span>
+                    <span className='title'>Fresh Ingredients</span>
+                    <span className='description'>Our pizzas are made with the finest and freshest ingredients, ensuring a burst of flavor in every bite.</span>
                 </div>
                 <div className='pictures'>
                     <img src={JalapenoPizza} alt=""/>

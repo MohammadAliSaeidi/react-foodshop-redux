@@ -1,31 +1,46 @@
 .pizza-slide {
-    width: 100%;
+    width: 80dvw;
     height: 100%;
     max-height: 100%;
     padding-top: 70px;
     user-select: none;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-inline: auto;
+}
+
+.pizza-slide > .content * {
+    display: block;
+}
+
+.pizza-slide .subheading {
+    font-size: 1.875rem;
+    color: var(--c-primary);
+    font-family: 'Nothing You Could Do', cursive;
+    line-height: 54px;
 }
 
 .pizza-slide .title {
     display: block;
     color: white;
-    font-size: 9.375rem;
-    font-weight: 700;
-    line-height: 11.25rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-block: 0.75rem 1.5rem;
     text-transform: uppercase;
 }
 
 .pizza-slide .description {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     line-height: 2.25rem;
     color: var(--c-primary);
     font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.5rem;
 }
 
-.pizza-slide1{
+.pizza-slide1 {
     padding-top: 150px;
+}
+
+.pizza-slide1 .subheading {
+    margin-inline: auto;
 }
 
 .pizza-slide1 > img {
@@ -46,14 +61,14 @@
     padding-bottom: 150px;
 }
 
-.pizza-slide3 {
-    flex-direction: row-reverse;
-    min-height: var(--hero-section-swiper-height);
-    padding-bottom: 150px;
+.pizza-slide2 > .content * {
+    text-align: right;
 }
 
-.pizza-slide2 > .content > * {
-    text-align: left;
+.pizza-slide2 .subheading {
+    display: block;
+    margin: 0;
+    text-align: right;
 }
 
 .pizza-slide2 > .pictures {
@@ -63,4 +78,14 @@
 .pizza-slide2 > .pictures > img {
     max-width: 100%;
     height: auto;
+}
+
+.pizza-slide3 {
+    flex-direction: row-reverse;
+    min-height: var(--hero-section-swiper-height);
+    padding-bottom: 150px;
+}
+
+.pizza-slide3 > .content * {
+    text-align: left;
 }

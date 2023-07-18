@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer";
 
 export default function HomePage() {
     return (
-        <div className={'home'}>
+        <div className={'home'} style={{background: `url(${process.env.PUBLIC_URL + '/images/bg_4.jpg'}) no-repeat fixed`}} >
             <Header/>
             <HeroSection/>
             <Menu />

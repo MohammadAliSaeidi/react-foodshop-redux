@@ -19,21 +19,17 @@
     color: var(--fc-black-text);
 }
 
-.slogan > div > svg {
+.slogan > div {
+    width: 100%;
+}
+
+.slogan > div > svg,
+.slogan > div > img
+{
     min-height: 90px;
     min-width: 90px;
     max-width: 90px;
     max-height: 90px;
     margin: 0;
     padding: 0;
-}
-
-.slogan > div {
-    width: 100%;
-    fill: var(--fc-black-text);
-    transition-duration: 300ms;
-}
-
-.slogan > div:hover {
-    fill: white;
 }

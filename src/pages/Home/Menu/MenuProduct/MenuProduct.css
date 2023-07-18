@@ -59,19 +59,19 @@
 
 .add-to-cart-and-price > .price {
     color: var(--c-primary);
-    font-size: 18px;
+    font-size: 1rem;
     letter-spacing: 1px;
 }
 
 .add-to-cart-and-price > .add-to-cart {
     overflow: clip;
     min-height: fit-content;
-    max-width: 0px;
+    max-width: 0;
     transition-duration: var(--hover-duration);
 }
 
 .add-to-cart-and-price > .add-to-cart.show-add-button {
-    max-width: 100px;
+    max-width: 120px;
 }
 
 .add-to-cart-button {
@@ -83,7 +83,7 @@
     color: var(--c-primary);
     border-radius: 50px;
     min-height: 36px;
-    font-size: 16px;
+    font-size: 0.8125rem;
     padding: 5px 10px;
     transition-duration: var(--hover-duration);
 }

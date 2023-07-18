@@ -181,5 +181,10 @@
       ]
     }
   ],
-  "cart-orders": []
+  "cart-orders": [
+    {
+      "id": 1,
+      "quantity": 1
+    }
+  ]
 }

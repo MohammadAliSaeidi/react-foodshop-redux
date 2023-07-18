@@ -7,8 +7,8 @@
     content: ' ';
     position: absolute;
     inset: 0;
-    background-color: #0c161e;
-    opacity: 0.8;
+    background-color: #000;
+    opacity: 0.7;
 }
 
 .hero-section > .hero-section--swiper {
@@ -19,8 +19,6 @@
     min-height: var(--hero-section-swiper-height);
     max-height:  var(--hero-section-swiper-height);
     object-fit: cover;
-    background-repeat: repeat;
-    background-size: 350px;
     min-width: 100%;
     overflow: clip;
 }

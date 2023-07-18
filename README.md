@@ -4,27 +4,31 @@
 The Online Food Shop - Pizza App is a React-based project designed to simulate an online food ordering system for pizzas. It serves as a practical exercise to enhance proficiency in React, Redux, and Redux Toolkit while creating an interactive user interface. The application fetches fake data using Axios from a JSON Server and utilizes various tools and technologies to deliver a seamless experience.
 
 ## Tools and Packages
+
 The project incorporates several tools and packages, including:
+
+- Node.js v18.16.1
+- Yarn v1.22.19
 - React v18.2.0
 - Redux v4.2.1
 - Redux Toolkit v1.9.5
 - Axios v1.4.0
 - JSON Server v0.17.3
-- Yarn (package manager)
 
 Additional packages utilized in this project include:
-- React Redux v8.1.1: The official Redux bindings for React.
-- Redux Logger v3.0.6: A middleware for logging Redux actions and state changes during development.
-- Redux Thunk v2.4.2: A middleware that allows writing async logic inside Redux actions.
-- Swiper v9.4.1: A touch slider library for creating carousel-like components.
-- React Icons v4.9.0: A library providing a vast collection of icons for React applications.
-- Web Vitals v2.1.0: A library for measuring web performance metrics.
+
+- React Redux v8.1.1
+- Redux Logger v3.0.6
+- Redux Thunk v2.4.2
+- Swiper v9.4.1
+- React Icons v4.9.0
+- Web Vitals v2.1.0
 
 ## Features
 The Online Food Shop - Pizza App includes the following features:
 
 - **Browse and Add to Cart**: Users can explore the menu and add desired pizza items to the cart.
-- **Adjust Quantity**: Users have the flexibility to increase or decrease the quantity of pizza items in the cart.
+- **Adjust Quantity**: Users have the flexibility to increase or decrease the number of pizza items in the cart.
 - **Remove from Cart**: Users can remove specific pizza items from the cart altogether.
 
 ## Usage
@@ -43,8 +47,8 @@ The `WebService.js` module is responsible for interacting with the server using 
 - **`GetMenuData()`**: Retrieves an array of menu data containing information about each item in the menu, such as names, prices, descriptions, etc.
 - **`GetCartOrders()`**: Retrieves all orders in the user's cart (cart items).
 - **`GetMenuProductById(id)`**: Retrieves a menu product by its `id`.
-- **`IncreaseOrderQuantity(id)`**: Increases the quantity of an order in the cart specified by its `id`.
-- **`DecreaseOrderQuantity(id)`**: Decreases the quantity of an order in the cart specified by its `id`.
+- **`IncreaseOrderQuantity(id)`**: Increases the quantity of the order in the cart specified by its `id`.
+- **`DecreaseOrderQuantity(id)`**: Decreases the quantity of the order in the cart specified by its `id`.
 - **`RemoveOrderFromCart(id)`**: Removes an order from the cart specified by its `id`.
 - **`AddOrderToCart(id)`**: Adds an order to the cart specified by its `id`.
 ## Redux

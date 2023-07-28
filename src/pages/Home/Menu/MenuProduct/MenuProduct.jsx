@@ -44,7 +44,7 @@ export default function MenuProduct({data}) {
             <p className='name'>{data.name}</p>
             <p className='description'>{data.description}</p>
             <div className='add-to-cart-and-price'>
-                <div className={'add-to-cart ' + (hovered ? 'show-add-button' : '')}>
+                <div className={'add-to-cart ' + (hovered || (cartOrder && cartOrder.quantity !== 0)  ? 'show-add-button' : '')}>
                     {
                         cartOrder && cartOrder.quantity > 0 ?
                             <Quantity productQuantity={cartOrder.quantity} productId={cartOrder.id}

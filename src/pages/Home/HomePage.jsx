@@ -10,7 +10,7 @@ export default function HomePage() {
             <Header/>
             <HeroSection/>
             <Menu />
-            <Footer />
+            {/*<Footer />*/}
         </div>
     )
 }

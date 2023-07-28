@@ -1,4 +1,4 @@
-.quantity-inputs{
+.quantity-inputs {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -13,7 +13,7 @@
     --input-width: 24px;
 }
 
-.quantity-inputs > *{
+.quantity-inputs > * {
     margin: 0;
     padding: 0;
 }
@@ -24,21 +24,21 @@
     min-height: 24px;
     width: var(--input-width);
     text-align: center;
-    color: var(--fc-black-text);
+    color: var(--c-primary) !important;
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
     appearance: textfield;
     user-select: none;
 }
 
-.quantity-inputs > input:focus{
+.quantity-inputs > input:focus {
     outline: none;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 
-.quantity-inputs > input::selection{
+.quantity-inputs > input::selection {
     user-select: none;
 }
 
@@ -49,12 +49,12 @@ input[type=number]::-webkit-outer-spin-button {
     -moz-appearance: none;
 }
 
-.loading{
+.loading {
     width: calc((var(--button-size) * 2) + var(--input-width));
 }
 
 .quantity-button {
-    border:none;
+    border: none;
     color: var(--c-primary);
     background: none;
     font-size: 18px;
@@ -62,11 +62,16 @@ input[type=number]::-webkit-outer-spin-button {
     height: var(--button-size);
 }
 
-.quantity-button > .remove-icon > svg{
+.quantity-button > .remove-icon > svg {
     fill: var(--c-primary);
     width: 12px;
 }
 
 .quantity-button:hover {
     cursor: pointer;
+    color: var(--fc-white-text);
+}
+
+.quantity-button:hover > .remove-icon > svg {
+    fill: var(--fc-white-text);
 }

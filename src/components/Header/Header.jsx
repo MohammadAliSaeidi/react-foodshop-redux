@@ -31,10 +31,9 @@ export default function Header() {
                 <nav>
                     <button className='nav-button'>HOME</button>
                     <button className='nav-button'>MENU</button>
-                    <button className='nav-button'>BLOG</button>
                 </nav>
                 <div className='right-links'>
-                    <PhoneNumber/>
+                    {/*<PhoneNumber/>*/}
                     <Cart/>
                 </div>
             </div>

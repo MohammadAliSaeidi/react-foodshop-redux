@@ -65,6 +65,6 @@ server.post('/cart-orders/:id/add', (req, res) => {
 });
 
 server.use(router);
-server.listen(3001, () => {
+server.listen(5001, () => {
 	console.log('JSON Server is running');
 });

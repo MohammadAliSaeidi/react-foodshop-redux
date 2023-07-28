@@ -6,7 +6,7 @@
     align-items: start;
     gap: 16px;
     justify-content: space-between;
-    border-bottom: 1px solid #dedede;
+    border-bottom: 1px solid #444;
 }
 
 .cart-item > .remove-order {
@@ -15,7 +15,8 @@
     width: 16px;
     height: 16px;
     cursor: pointer;
-    background-color: black;
+    background-color: var(--c-primary);
+    border: none;
 }
 
 .cart-item > .remove-order > span > svg {
@@ -23,14 +24,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    fill: white;
+    fill: #1F2330;
+}
+
+.cart-item > .remove-order:hover{
+    background-color: var(--fc-white-text);
 }
 
 .cart-item > .content {
     display: flex;
     flex-direction: row;
     gap: 16px;
-
+    align-items: center;
 }
 
 .cart-item > .content > img {
@@ -51,10 +56,11 @@
     text-transform: uppercase;
     margin-bottom: 8px;
     text-align: left;
+    color: var(--fc-white-text);
 }
 
 .info > .price {
-    color: #999999;
+    color: #aaa;
     font-size: 16px;
     font-weight: 500;
 }

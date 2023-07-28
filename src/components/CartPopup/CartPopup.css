@@ -1,13 +1,15 @@
 .cart-popup {
     position: absolute;
-    background: #fff;
+    background: #1F2330;
     left: 0;
     top: 100%;
     transform: translateX(-50%);
     padding: 18px 24px;
-    border-top: 3px solid var(--c-primary);
     white-space: nowrap;
-
+    box-shadow: 0 8px 40px black;
+    max-height: 70vh;
+    overflow: auto;
+    border-radius: 5px;
 }
 
 .cart-popup > .empty-cart{
@@ -19,7 +21,7 @@
     justify-content: space-between;
     padding-inline: 16px;
     font-size: 16px;
-    color: #999999;
+    color: var(--fc-white-text);
 }
 
 .subtotal-container > .subtotal {

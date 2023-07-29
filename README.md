@@ -3,8 +3,8 @@
 ## Overview
 The Online Food Shop - Pizza App is a React-based project designed to simulate an online food ordering system for pizzas. It serves as a practical exercise to enhance proficiency in React, Redux, and Redux Toolkit while creating an interactive user interface. The application fetches fake data using Axios from a JSON Server and utilizes various tools and technologies to deliver a seamless experience.
 
-You can see a sample of the website in the video:
-https://github.com/MohammadAliSaeidi/react-foodshop-redux/assets/70700922/7c54af8e-6675-43ae-941a-da506d0e05f9
+### You can see a sample of the website in the video:
+https://github.com/MohammadAliSaeidi/react-foodshop-redux/assets/70700922/7c54af8e-6675-43ae-941a-da506d0e05f9.mp4
 
 ## Tools and Packages
 
